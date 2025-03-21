@@ -22,8 +22,9 @@
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
 
-    "rootDir": "./",
+    "rootDir": "./src/",
     "outDir": "./dist",
+    "jsxImportSource": "#my-jsx",
   },
   "include": ["src"]
 }

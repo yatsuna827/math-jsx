@@ -2,15 +2,14 @@
   "name": "jsx-math",
   "module": "src/index.tsx",
   "devDependencies": {
-    "@types/bun": "latest",
-    "@types/react": "^19.0.12"
+    "@types/bun": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.7.2"
+  },
+  "imports": {
+    "#my-jsx/jsx-runtime": "./dist/my-jsx/jsx-runtime.js"
   },
   "private": true,
-  "type": "module",
-  "dependencies": {
-    "react": "^19.0.0"
-  }
+  "type": "module"
 }
