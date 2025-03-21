@@ -1,0 +1,16 @@
+{
+  "name": "jsx-math",
+  "module": "src/index.tsx",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.0.12"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "react": "^19.0.0"
+  }
+}
