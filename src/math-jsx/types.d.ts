@@ -1,16 +1,21 @@
+import type { MathJSXElement, Term } from "./jsx-runtime";
+
 interface HasChildren {
-  children: number | number[];
+  children: Term;
 }
 
-declare namespace JSX {
-  interface IntrinsicElements {
-    sum: HasChildren;
-    prod: HasChildren;
-  }
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      sum: HasChildren;
+      prod: HasChildren;
+    }
 
-  type Element = number;
+    type Element = MathJSXElement;
+    type ElementType = "sum" | "prod" | ((props: any) => Term);
 
-  interface ElementChildrenAttribute {
-    children: unknown;
+    interface ElementChildrenAttribute {
+      children: unknown;
+    }
   }
 }
