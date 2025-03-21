@@ -5,7 +5,7 @@
     "@types/bun": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5.7.2"
+    "typescript": "^5.8.2"
   },
   "imports": {
     "#my-jsx/jsx-runtime": "./dist/my-jsx/jsx-runtime.js"

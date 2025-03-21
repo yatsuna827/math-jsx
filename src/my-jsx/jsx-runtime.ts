@@ -1,8 +1,13 @@
 export function jsx(
-  tag: string,
-  { children, ...props }: Record<string, unknown>
+  tag: string | ((props: Record<string, unknown>) => JSX.Element),
+  props: Record<string, unknown>
 ): string {
-  const attr = Object.entries(props)
+  if (typeof tag === "function") {
+    return tag(props);
+  }
+
+  const { children, ...rest } = props;
+  const attr = Object.entries(rest)
     .map(([key, value]) => ` ${key}="${value}"`)
     .join("");
 

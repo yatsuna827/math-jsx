@@ -10,4 +10,8 @@ declare namespace JSX {
   }
 
   type Element = string;
+
+  interface ElementChildrenAttribute {
+    children: unknown;
+  }
 }
