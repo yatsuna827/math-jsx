@@ -1,10 +1,35 @@
-const Title = (props: { children: string }) => <h1>{props.children}</h1>;
+import { evaluate, render } from "#math-jsx/jsx-runtime";
 
-const element = (
+type SigmaProps = {
+  from: number;
+  to: number;
+  step?: number;
+};
+const Sigma: MathJSX.FC<SigmaProps> = ({ from, to, step = 1 }) => {
+  const children: number[] = [];
+  for (let i = from; i <= to; i += step) {
+    children.push(i);
+  }
+
+  return <sum>{children}</sum>;
+};
+
+const expression = (
   <>
-    <Title>Hello, world!</Title>
-    <h1 id="hello">Hello, world!</h1>
+    <Sigma from={1} to={3} />
+    <sum>{10}</sum>
+    <prod>
+      {/* フラグメントはカッコの役割（評価には影響しない） */}
+      <>
+        {1}
+        {/* 空フラグメントが作れてしまうけど無視される */}
+        <></>
+        {[1, 2, 3]}
+      </>
+      {4}
+      {5}
+    </prod>
   </>
 );
 
-console.log(element);
+console.log(render(expression), "=", evaluate(expression));

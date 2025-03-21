@@ -8,7 +8,7 @@
     "typescript": "^5.8.2"
   },
   "imports": {
-    "#my-jsx/jsx-runtime": "./dist/my-jsx/jsx-runtime.js"
+    "#math-jsx/jsx-runtime": "./dist/math-jsx/jsx-runtime.js"
   },
   "private": true,
   "type": "module",
