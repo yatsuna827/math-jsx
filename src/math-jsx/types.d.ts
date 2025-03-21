@@ -1,15 +1,14 @@
 interface HasChildren {
-  children?: string | string[];
+  children: number | number[];
 }
 
 declare namespace JSX {
   interface IntrinsicElements {
-    div: HasChildren & { key?: string };
-    h1: HasChildren & { id?: string };
-    p: HasChildren;
+    sum: HasChildren;
+    prod: HasChildren;
   }
 
-  type Element = string;
+  type Element = number;
 
   interface ElementChildrenAttribute {
     children: unknown;

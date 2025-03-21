@@ -24,7 +24,8 @@
 
     "rootDir": "./src/",
     "outDir": "./dist",
-    "jsxImportSource": "#my-jsx",
+    // "jsxImportSource": "#my-jsx",
+    "jsxImportSource": "#math-jsx",
   },
   "include": ["src"]
 }
