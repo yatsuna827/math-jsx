@@ -11,5 +11,8 @@
     "#my-jsx/jsx-runtime": "./dist/my-jsx/jsx-runtime.js"
   },
   "private": true,
-  "type": "module"
+  "type": "module",
+  "scripts": {
+    "debug": "tsc && node ./dist/index.js"
+  }
 }
