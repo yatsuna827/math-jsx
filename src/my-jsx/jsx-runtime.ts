@@ -15,4 +15,12 @@ export function jsx(
   return `<${tag}${attr}>${innerHTML}</${tag}>`;
 }
 
+export function Fragment({
+  children,
+}: {
+  children: string | string[];
+}): string {
+  return Array.isArray(children) ? children.join("") : children;
+}
+
 export { jsx as jsxs };
