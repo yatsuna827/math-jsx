@@ -5,7 +5,7 @@ type SigmaProps = {
   to: number;
   step?: number;
 };
-const Sigma = ({ from, to, step = 1 }: SigmaProps): JSX.Element => {
+const Sigma: MathJSX.FC<SigmaProps> = ({ from, to, step = 1 }) => {
   const children: number[] = [];
   for (let i = from; i <= to; i += step) {
     children.push(i);

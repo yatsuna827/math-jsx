@@ -18,4 +18,7 @@ declare global {
       children: unknown;
     }
   }
+  namespace MathJSX {
+    type FC<Props = {}> = (props: Props) => JSX.Element;
+  }
 }
